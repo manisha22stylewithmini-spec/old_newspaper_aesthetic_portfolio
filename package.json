@@ -1,0 +1,20 @@
+{
+  "name": "manisha-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/footer.tsx --bundle --minify --format=iife --target=es2020 --define:process.env.NODE_ENV=\\\"production\\\" --outfile=js/footer.bundle.js",
+    "dev": "esbuild src/footer.tsx --bundle --format=iife --target=es2020 --define:process.env.NODE_ENV=\\\"development\\\" --outfile=js/footer.bundle.js --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "esbuild": "^0.24.2",
+    "typescript": "^5.6.3"
+  }
+}

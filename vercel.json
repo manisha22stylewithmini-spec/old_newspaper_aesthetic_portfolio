@@ -1,0 +1,7 @@
+{
+  "framework": null,
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build && mkdir -p dist && cp -R index.html contact.html css js assets dist/",
+  "outputDirectory": "dist",
+  "cleanUrls": true
+}

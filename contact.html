@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Manisha Baroliya</title>
+  <link rel="icon" href="assets/mb-logo-badge.webp" type="image/webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Special+Elite&family=Oswald:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Same newspaper-scrap language as the hero: news wall, ink splash, ransom letters, taped clipping. */
+    .contact-page { position: relative; min-height: 100vh; overflow: hidden; display: grid; place-items: center; padding: 110px 16px 70px; }
+    .contact-page .news-bg { position: fixed; }
+    .contact-wrap { position: relative; width: min(620px, 100%); display: grid; justify-items: center; }
+
+    .contact-splash { position: relative; z-index: 2; width: min(520px, 94vw); aspect-ratio: 1200 / 670; display: grid; place-items: center; margin-bottom: -64px; animation: pop .7s cubic-bezier(.34,1.56,.64,1) both; }
+    .contact-splash .cut { opacity: 1; height: clamp(34px, 7vw, 58px); font-size: clamp(24px, 5vw, 42px); rotate: var(--r, 0deg); animation: drop .35s ease-out both; animation-delay: calc(.45s + var(--i) * .06s); }
+
+    .contact-card { position: relative; z-index: 1; width: 100%; background: #fbf8f1; padding: 92px 40px 40px; rotate: -1deg;
+      filter: drop-shadow(0 10px 24px rgba(28,23,48,.18));
+      clip-path: polygon(0 1.2%, 6% 0, 14% .9%, 23% .2%, 31% 1.1%, 42% .3%, 55% 1%, 63% .1%, 74% .9%, 86% .2%, 94% 1%, 100% .3%, 100% 99%, 93% 100%, 82% 99.2%, 70% 99.9%, 58% 99.1%, 45% 100%, 33% 99.2%, 21% 99.9%, 9% 99.1%, 0 99.8%);
+      animation: rise .6s .15s ease-out both; }
+    .contact-tape { position: absolute; z-index: 3; width: 150px; pointer-events: none; animation: rise .4s .8s ease-out both; }
+    .contact-tape.t1 { left: -34px; top: 262px; rotate: -38deg; }
+    .contact-tape.t2 { right: -34px; bottom: 96px; rotate: -34deg; }
+    .contact-profile { position: absolute; z-index: 3; width: 112px; right: -26px; top: 230px; rotate: 8deg; filter: drop-shadow(0 4px 10px rgba(28,23,48,.2)); }
+
+    .contact-lead { line-height: 1.6; margin: 0 0 6px; padding-right: 70px; }
+    .contact-lead a { font-weight: 700; border-bottom: 2px solid var(--pink); }
+    .contact-card label { display: block; font-family: "Special Elite", monospace; font-size: 15px; letter-spacing: .5px; text-transform: uppercase; margin: 22px 0 4px; }
+    .contact-card input, .contact-card textarea { width: 100%; border: 0; border-bottom: 2px dashed rgba(28,23,48,.45); padding: 8px 2px; font: inherit; font-size: 17px; color: var(--navy); background: transparent; outline: none; transition: border-color .2s, background .2s; }
+    .contact-card input:focus, .contact-card textarea:focus { border-bottom: 2px solid var(--purple); background: var(--lilac); }
+    .contact-card textarea { min-height: 120px; resize: vertical; }
+    .contact-card button { margin-top: 28px; background: var(--navy); color: var(--yellow); border: 0; padding: 12px 26px; font-family: var(--comic); font-size: 26px; letter-spacing: 2px; cursor: pointer; rotate: -2deg; box-shadow: 1px 2px 3px rgba(0,0,0,.35); transition: transform .2s; }
+    .contact-card button:hover { transform: translateY(-3px) rotate(-2deg); }
+
+    .contact-caption { position: relative; z-index: 2; margin: 26px 0 0; background: #fff; color: var(--navy); border-left: 6px solid var(--pink); box-shadow: 0 6px 20px rgba(28,23,48,.12); font-weight: 700; font-size: clamp(16px, 2.4vw, 22px); padding: .3em .8em; text-align: center; letter-spacing: -.3px; animation: wipe .8s 1s ease-in-out both; }
+
+    @keyframes pop  { from { transform: scale(0) rotate(-8deg); } to { transform: scale(1) rotate(-3deg); } }
+    @keyframes drop { from { opacity: 0; transform: translateY(-14px) scale(1.4); } }
+    @keyframes rise { from { opacity: 0; transform: translateY(30px); } }
+    @keyframes wipe { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+
+    @media (max-width: 560px) {
+      .contact-card { padding: 84px 22px 32px; }
+      .contact-profile { width: 84px; right: -8px; top: 170px; }
+      .contact-lead { padding-right: 46px; }
+      .contact-tape { width: 110px; }
+      .contact-tape.t1 { left: -20px; }
+      .contact-tape.t2 { right: -20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .contact-splash, .contact-splash .cut, .contact-card, .contact-tape, .contact-caption { animation: none; }
+      .contact-splash { transform: rotate(-3deg); }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Home"><img class="logo-img" src="assets/mb-logo-badge.webp" alt="Manisha Baroliya" /></a>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a class="contact-floating" href="contact.html" aria-label="Contact Manisha">
+      <img src="assets/floating-button.png" alt="" />
+    </a>
+  </header>
+  <nav class="menu" aria-hidden="true">
+    <ul>
+      <li><a href="index.html">ABOUT<svg class="scribble" viewBox="0 0 168 55" aria-hidden="true"><path d="M8 30 C 20 6, 150 4, 160 22 C 166 38, 60 52, 22 44 C 4 40, 12 22, 60 16 C 100 12, 140 20, 150 30"/></svg></a></li>
+      <li><a href="contact.html" class="active">CONTACT<svg class="scribble" viewBox="0 0 168 55" aria-hidden="true"><path d="M8 30 C 20 6, 150 4, 160 22 C 166 38, 60 52, 22 44 C 4 40, 12 22, 60 16 C 100 12, 140 20, 150 30"/></svg></a></li>
+    </ul>
+  </nav>
+  <main class="contact-page">
+    <div class="news-bg" aria-hidden="true"></div>
+    <div class="contact-wrap">
+      <div class="contact-splash">
+        <img class="splash-shape" src="assets/splash-mb.webp" alt="" />
+        <h1 class="ransom" aria-label="Let's talk">
+          <span class="row">
+            <span class="cut c-dark" style="--i:0;--r:-6deg">L</span><img class="cut" style="--i:1;--r:4deg" src="assets/cut-E-purple.png" alt="" /><img class="cut" style="--i:2;--r:-3deg" src="assets/cut-T-red.png" alt="" /><span class="cut c-light" style="--i:3;--r:7deg">'</span><span class="cut c-red" style="--i:4;--r:-5deg">S</span>
+            <span class="gap"></span>
+            <img class="cut" style="--i:5;--r:5deg" src="assets/cut-T-green.png" alt="" /><img class="cut" style="--i:6;--r:-4deg" src="assets/cut-A-yellow.png" alt="" /><span class="cut c-print" style="--i:7;--r:6deg">L</span><span class="cut c-blue" style="--i:8;--r:-7deg">K</span>
+          </span>
+        </h1>
+      </div>
+      <form class="contact-card" action="mailto:manishabaroliya2025@gmail.com" method="post" enctype="text/plain">
+        <p class="contact-lead">Hiring for a product or UX/UI role, or need a design system that holds together? Drop me a line — or email <a href="mailto:manishabaroliya2025@gmail.com">manishabaroliya2025@gmail.com</a>.</p>
+        <label for="name">Name</label><input id="name" name="name" required />
+        <label for="email">E-mail</label><input id="email" name="email" type="email" required />
+        <label for="msg">Tell me about your project</label><textarea id="msg" name="message" required></textarea>
+        <button type="submit">SEND IT</button>
+      </form>
+      <img class="contact-tape t1" src="assets/tape-paper.png" alt="" />
+      <img class="contact-tape t2" src="assets/tape-paper.png" alt="" />
+      <img class="contact-profile" src="assets/mb-profile-sm.webp" alt="Manisha Baroliya, product designer" />
+      <p class="contact-caption">Good design goes unnoticed. A good brief never does.</p>
+    </div>
+  </main>
+  <script>
+    (() => {
+      const b = document.body, burger = document.querySelector(".hamburger"), menu = document.querySelector(".menu");
+      const set = (o) => { b.classList.toggle("menu-open", o); burger.setAttribute("aria-expanded", o); menu.setAttribute("aria-hidden", !o); };
+      burger.addEventListener("click", () => set(!b.classList.contains("menu-open")));
+      document.addEventListener("keydown", (e) => e.key === "Escape" && set(false));
+    })();
+  </script>
+</body>
+</html>

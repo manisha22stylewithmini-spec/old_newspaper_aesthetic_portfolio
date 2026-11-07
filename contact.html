@@ -38,6 +38,15 @@
 
     .contact-caption { position: relative; z-index: 2; margin: 26px 0 0; background: #fff; color: var(--navy); border-left: 6px solid var(--pink); box-shadow: 0 6px 20px rgba(28,23,48,.12); font-weight: 700; font-size: clamp(16px, 2.4vw, 22px); padding: .3em .8em; text-align: center; letter-spacing: -.3px; animation: wipe .8s 1s ease-in-out both; }
 
+    .contact-socials { position: relative; z-index: 2; width: min(620px, 100%); margin-top: 30px; text-align: center; animation: rise .5s 1.2s ease-out both; }
+    .contact-socials-title { display: inline-block; font-family: "Special Elite", monospace; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; background: var(--navy); color: #fff; padding: 4px 10px; rotate: -1.5deg; }
+    .contact-socials ul { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .contact-socials a { display: inline-block; background: #fbf8f1; border: 2px solid var(--navy); padding: 6px 12px; font-weight: 600; font-size: 14px; box-shadow: 1px 2px 3px rgba(0,0,0,.25); transition: transform .2s, background .2s; }
+    .contact-socials li:nth-child(odd) a { rotate: -2deg; }
+    .contact-socials li:nth-child(even) a { rotate: 1.5deg; }
+    .contact-socials a:hover { background: var(--yellow); transform: translateY(-2px); }
+    .contact-socials a:focus-visible { outline: 3px solid var(--purple); outline-offset: 3px; }
+
     @keyframes pop  { from { transform: scale(0) rotate(-8deg); } to { transform: scale(1) rotate(-3deg); } }
     @keyframes drop { from { opacity: 0; transform: translateY(-14px) scale(1.4); } }
     @keyframes rise { from { opacity: 0; transform: translateY(30px); } }
@@ -52,7 +61,7 @@
       .contact-tape.t2 { right: -20px; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .contact-splash, .contact-splash .cut, .contact-card, .contact-tape, .contact-caption { animation: none; }
+      .contact-splash, .contact-splash .cut, .contact-card, .contact-tape, .contact-caption, .contact-socials { animation: none; }
       .contact-splash { transform: rotate(-3deg); }
     }
   </style>
@@ -96,6 +105,21 @@
       <img class="contact-profile" src="assets/mb-profile-sm.webp" alt="Manisha Baroliya, product designer" />
       <p class="contact-caption">Good design goes unnoticed. A good brief never does.</p>
     </div>
+    <nav class="contact-socials" aria-label="Find me elsewhere">
+      <span class="contact-socials-title">Find me elsewhere</span>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/manisha-baroliya-488016265/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.behance.net/manishabarol2023" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="https://dribbble.com/manisha_baroliya" target="_blank" rel="noopener">Dribbble</a></li>
+        <li><a href="https://www.instagram.com/offical_manisha_baroliya/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://github.com/manisha22stylewithmini-spec" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://x.com/Manisha_Offical" target="_blank" rel="noopener">X</a></li>
+        <li><a href="https://www.facebook.com/uxdesignermanisha/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://in.pinterest.com/uxdesignermanisha/" target="_blank" rel="noopener">Pinterest</a></li>
+        <li><a href="https://ui.live/profile/Manishabaroliya" target="_blank" rel="noopener">ui.live</a></li>
+        <li><a href="https://me.muz.li/manisha_baroliya" target="_blank" rel="noopener">Muzli</a></li>
+      </ul>
+    </nav>
   </main>
   <script>
     (() => {

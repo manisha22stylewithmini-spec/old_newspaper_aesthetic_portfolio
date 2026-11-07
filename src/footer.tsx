@@ -1,7 +1,21 @@
 // Mounts the Pushpin Tear Footer into the static site as a React island.
 // Build: `npm run build` → js/footer.bundle.js (loaded by index.html).
 import { createRoot } from "react-dom/client"
-import PushpinTearFooter from "@/components/ui/pushpin-tear-footer"
+import PushpinTearFooter, { type IconLink } from "@/components/ui/pushpin-tear-footer"
+
+// Keep in sync with the "Find me elsewhere" list on contact.html.
+const SOCIALS: IconLink[] = [
+  { icon: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/manisha-baroliya-488016265/" },
+  { icon: "behance", label: "Behance", href: "https://www.behance.net/manishabarol2023" },
+  { icon: "dribbble", label: "Dribbble", href: "https://dribbble.com/manisha_baroliya" },
+  { icon: "ig", label: "Instagram", href: "https://www.instagram.com/offical_manisha_baroliya/" },
+  { icon: "github", label: "GitHub", href: "https://github.com/manisha22stylewithmini-spec" },
+  { icon: "x", label: "X", href: "https://x.com/Manisha_Offical" },
+  { icon: "facebook", label: "Facebook", href: "https://www.facebook.com/uxdesignermanisha/" },
+  { icon: "pinterest", label: "Pinterest", href: "https://in.pinterest.com/uxdesignermanisha/" },
+  { icon: "uilive", label: "ui.live", href: "https://ui.live/profile/Manishabaroliya" },
+  { icon: "muzli", label: "Muzli", href: "https://me.muz.li/manisha_baroliya" },
+]
 
 const EMAIL = "manishabaroliya2025@gmail.com"
 const MAILTO = "mailto:" + EMAIL
@@ -49,10 +63,7 @@ function SiteFooter() {
       mark="MB / 2026"
       timeZone="Asia/Kolkata"
       timeLabel="IST"
-      socials={[
-        { icon: "mail", label: "Email Manisha", href: MAILTO },
-        { icon: "chat", label: "Contact page", href: "contact.html" },
-      ]}
+      socials={SOCIALS}
       columns={[
         {
           title: "explore",

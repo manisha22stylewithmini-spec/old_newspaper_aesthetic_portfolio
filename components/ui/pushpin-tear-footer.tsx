@@ -181,6 +181,7 @@ export function mixHex(a: string, b: string, t: number) {
 
 export type IconName =
   | "github" | "21st" | "x" | "ig" | "linkedin" | "dribbble" | "chat" | "globe" | "mail" | "link" | "shield" | "doc"
+  | "behance" | "facebook" | "pinterest" | "uilive" | "muzli"
 
 export type TearLink = { label: string; href?: string }
 export type IconLink = { icon: IconName; label: string; href?: string }
@@ -252,6 +253,11 @@ function Icon({ name }: { name: IconName | "chevL" | "copy" | "squiggle" | "arro
     case "x": return svg(<path d="M5 4.5h3.6l10.4 15H15.4zM18.6 4.5 13.4 10.4M5.4 19.5l5.4-6.2" />)
     case "ig": return svg(<><rect x="3.5" y="3.5" width="17" height="17" rx="5" /><circle cx="12" cy="12" r="3.8" /><circle cx="17.1" cy="6.9" r=".6" fill="currentColor" /></>)
     case "dribbble": return svg(<><circle cx="12" cy="12" r="8.5" /><path d="M5.2 7c4.5 2 9.8 2 13 .7M3.6 13c5-1.6 10.4-.4 14 4.6M9 3.9c3 3.6 5.2 9.3 5.7 15.6" /></>)
+    case "behance": return svg(<path d="M3.2 6.8h4.4a2.5 2.5 0 0 1 0 5H3.2zM3.2 11.8h5a2.8 2.8 0 0 1 0 5.6h-5zM13.4 13.6h7.1a3.6 3.6 0 1 0-1.1 2.8M14.6 7.6h4.6" />)
+    case "facebook": return svg(<path d="M15 3.5h-1.9a3.3 3.3 0 0 0-3.3 3.3v13.7M7.3 10.2h7.4" />)
+    case "pinterest": return svg(<><circle cx="12" cy="12" r="8.5" /><path d="M11.2 12.4 9.6 20M9.4 11a3 3 0 1 1 2.9 3.6c-.8 0-1.4-.3-1.8-.8" /></>)
+    case "uilive": return svg(<><rect x="3.5" y="3.5" width="17" height="17" rx="4.5" /><path d="M7.6 8.6v4.6a2.2 2.2 0 0 0 4.4 0V8.6M15.6 8.6v6.8" /></>)
+    case "muzli": return svg(<><circle cx="12" cy="12" r="8.5" /><path d="M7.4 15.4V9.8l4.6 4 4.6-4v5.6" /></>)
     case "globe": return svg(<><circle cx="12" cy="12" r="8.5" /><path d="M3.5 12h17M12 3.5c2.5 2.6 3.6 5.4 3.6 8.5s-1.1 5.9-3.6 8.5c-2.5-2.6-3.6-5.4-3.6-8.5S9.5 6.1 12 3.5z" /></>)
     case "mail": return svg(<><rect x="3.5" y="5.5" width="17" height="13" rx="2.5" /><path d="m4.5 7 7.5 6 7.5-6" /></>)
     case "link": return svg(<path d="M10.5 13.5a3.5 3.5 0 0 0 5 0l3-3a3.5 3.5 0 0 0-5-5l-1 1M13.5 10.5a3.5 3.5 0 0 0-5 0l-3 3a3.5 3.5 0 0 0 5 5l1-1" />)
